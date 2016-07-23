@@ -10,8 +10,9 @@ sed -i 's/BOOTPROTO\=\"dhcp\"/BOOTPROTO\=\"static\"/' /etc/sysconfig/network-scr
 echo "IPADDR=192.168.1.6" >> /etc/sysconfig/network-scripts/ifcfg-eth0
 echo "NETMASK=255.255.255.0" >> /etc/sysconfig/network-scripts/ifcfg-eth0
 echo "GATEWAY=192.168.1.1" >> /etc/sysconfig/network-scripts/ifcfg-eth0
-echo "HOSTNAME=pignuckle" >> /etc/sysconfig/network
-echo "DNS1=192.168.1.1" >> /etc/sysconfig/network
+echo "DNS1=192.168.1.1" >> /etc/sysconfig/network-scripts/ifcfg-eth0
+#echo "HOSTNAME=pignuckle" >> /etc/sysconfig/network
+#echo "DNS1=192.168.1.1" >> /etc/sysconfig/network
 systemctl restart network
 
 cat <<HAIL_ERIS> /etc/issue.net
