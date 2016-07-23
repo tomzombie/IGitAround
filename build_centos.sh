@@ -24,3 +24,4 @@ HAIL_ERIS
 
 sed -i 's/\#Banner none/Banner \/etc\/issue\.net/' /etc/ssh/sshd_config
 sed -i 's/\#PermitRootLogin\ yes/PermitRootLogin\ no/' /etc/ssh/sshd_config
+systemctl restart sshd
