@@ -3,6 +3,8 @@ timedatectl set-timezone America/Phoenix
 hostnamectl set-hostname pignuckle
 yum -y update
 yum -y install nano
+yum -y groupinstall "Server with GUI"
+yum -y groupinstall "Development Tools"
 adduser tomzombie
 passwd tomzombie
 gpasswd -a tomzombie wheel
