@@ -21,6 +21,13 @@ sed -i 's/\#Banner none/Banner \/etc\/issue\.net/' /etc/ssh/sshd_config
 sed -i 's/\#PermitRootLogin\ yes/PermitRootLogin\ no/' /etc/ssh/sshd_config
 systemctl restart sshd
 
+mkdir /root/git
+git clone /root/git/ https://github.com/tomzombie/ddate.git
+yum install cmake
+cmake /root/git/ddate/
+make /root/git/ddate/
+make install /root/git/ddate
+
 sed -i 's/BOOTPROTO\=\"dhcp\"/BOOTPROTO\=\"static\"/' /etc/sysconfig/network-scripts/ifcfg-eth0
 echo "IPADDR=192.168.1.6" >> /etc/sysconfig/network-scripts/ifcfg-eth0
 echo "NETMASK=255.255.255.0" >> /etc/sysconfig/network-scripts/ifcfg-eth0
