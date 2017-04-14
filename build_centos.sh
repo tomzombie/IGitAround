@@ -22,7 +22,7 @@ sed -i 's/\#PermitRootLogin\ yes/PermitRootLogin\ no/' /etc/ssh/sshd_config
 systemctl restart sshd
 
 mkdir /root/git
-git clone /root/git/ https://github.com/tomzombie/ddate.git
+git clone https://github.com/tomzombie/ddate.git /root/git/
 yum install cmake
 cmake /root/git/ddate/
 make /root/git/ddate/
