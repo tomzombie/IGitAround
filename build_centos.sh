@@ -23,7 +23,7 @@ systemctl restart sshd
 
 mkdir /root/git
 git clone https://github.com/tomzombie/ddate.git /root/git/
-yum install cmake
+yum install -y cmake
 cmake /root/git/ddate/
 make /root/git/ddate/
 make install /root/git/ddate
