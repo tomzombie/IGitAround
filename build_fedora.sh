@@ -30,3 +30,5 @@ systemctl disable httpd.service
 systemctl stop bluetooth.service
 systemctl disable bluetooth.service
 
+#yubi key set up  stuff
+auth sufficient pam_yubico.so debug id=1 authfile=/etc/yubikeys
