@@ -22,6 +22,7 @@ sed -i 's/SELINUX\=enforcing/SELINUX\=disabled/' /etc/selinux/config
 
 #removing stupid ipv6
 cat GRUB_CMDLINE_LINUX_DEFAULT="IPv6.disable=1 quiet splash" >> /etc/default/grub
+grub2-mkconfig -o /boot/grub2/grub.cfg
 
 mkdir -p /root/git/ddate
 git clone https://github.com/tomzombie/ddate.git /root/git/ddate
