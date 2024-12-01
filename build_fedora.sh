@@ -20,6 +20,9 @@ systemctl restart sshd
 #disable selinux
 sed -i 's/SELINUX\=enforcing/SELINUX\=disabled/' /etc/selinux/config
 
+#removing stupid ipv6
+cat GRUB_CMDLINE_LINUX_DEFAULT="IPv6.disable=1 quiet splash" >> /etc/default/grub
+
 mkdir -p /root/git/ddate
 git clone https://github.com/tomzombie/ddate.git /root/git/ddate
 dnf install -y cmake
