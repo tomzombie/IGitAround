@@ -17,6 +17,9 @@ sed -i 's/\#Banner none/Banner \/etc\/issue\.net/' /etc/ssh/sshd_config
 sed -i 's/\#PermitRootLogin\ yes/PermitRootLogin\ no/' /etc/ssh/sshd_config
 systemctl restart sshd
 
+#disable selinux
+sed -i 's/SELINUX\=enforcing/SELINUX\=disabled/' /etc/selinux/config
+
 mkdir -p /root/git/ddate
 git clone https://github.com/tomzombie/ddate.git /root/git/ddate
 dnf install -y cmake
@@ -34,3 +37,4 @@ systemctl disable gdm
 
 #yubi key set up  stuff
 auth sufficient pam_yubico.so debug id=1 authfile=/etc/yubikeys
+reboot
