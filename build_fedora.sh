@@ -39,6 +39,8 @@ systemctl disable bluetooth.service
 systemctl stop gdm
 systemctl disable gdm
 
+dnf remove -y cups systemd-resolved httpd
+
 #yubi key set up  stuff
 auth sufficient pam_yubico.so debug id=1 authfile=/etc/yubikeys
 reboot
