@@ -1,5 +1,5 @@
 sudo su -
-timedatectl set-timezone America/New York
+timedatectl set-timezone America/New_York
 hostnamectl set-hostname diabolical
 dnf -y update
 dnf -y install nano
