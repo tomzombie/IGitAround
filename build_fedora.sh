@@ -31,14 +31,12 @@ cmake /root/git/ddate/
 make /root/git/ddate/
 make install /root/git/ddate
 
-systemctl stop httpd.service
-systemctl disable httpd.service
 systemctl stop bluetooth.service
 systemctl disable bluetooth.service
 systemctl stop gdm
 systemctl disable gdm
 
-dnf remove -y cups systemd-resolved httpd
+dnf remove -y cups
 
 #yubi key set up  stuff
 auth sufficient pam_yubico.so debug id=1 authfile=/etc/yubikeys
