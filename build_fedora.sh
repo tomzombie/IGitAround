@@ -26,8 +26,7 @@ sed -i 's/SELINUX\=enforcing/SELINUX\=disabled/' /etc/selinux/config
 
 mkdir -p /root/git/ddate
 git clone https://github.com/tomzombie/ddate.git /root/git/ddate
-dnf install -y cmake
-dnf install -y gcc
+dnf install -y cmake gcc
 cmake /root/git/ddate/
 make /root/git/ddate/
 make install /root/git/ddate
