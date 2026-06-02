@@ -2,7 +2,7 @@ sudo su -
 timedatectl set-timezone America/New_York
 hostnamectl set-hostname diabolical
 
-dnf -y install nano pam_yubico gcc git
+dnf -y install nano pam_yubico gcc git cmake
 
 cat <<HAIL_ERIS> /etc/issue.net
 ################################################################
